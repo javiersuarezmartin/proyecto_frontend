@@ -1,0 +1,55 @@
+/* NAVEGACION */
+
+.header {
+    width: 100%;
+    background-color: #FFF;
+}
+
+.logo {
+    height: 60px;
+}
+
+.nav-list {
+    float: right;
+    list-style: none;
+}
+
+.nav-item {
+    display: inline-block;
+    padding: 20px 20px;
+}
+
+.nav-item-icon {
+    display: inline-block;
+    padding: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #999;
+    transition: all .3s ease-in-out; 
+    padding: 20px;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: rgb(115, 215, 255);   
+}
+
+.icon-link {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.icon-link img {
+    width: 40px;
+}
+
+.username {
+    color: rgb(115, 215, 255);
+}
+
+.active {
+    color: #444;
+}

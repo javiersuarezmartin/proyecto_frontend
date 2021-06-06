@@ -1,1 +1,213 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Noto+Sans+TC:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #00B4DB;
+}
+
+.container {
+    margin-top: 0px;
+    height: 100vh;
+}
+
+.container-auth {
+    margin-top: 50px;   
+}
+
+
+.card {
+    margin: 0 auto;
+    width: 300px;
+    border-radius: 10px;
+    border: 1px solid #EEE;
+    text-align: center;
+    box-shadow: 1px 1px 10px rgb(100, 130, 135);
+}
+
+.card-title {
+    width: 100%;
+    /*background-color: red;*/
+    margin: 20px 0px;
+}
+
+.card-body {
+    width: 100%;
+    /*background-color: blue;*/
+    margin: 20px 0px;
+}
+
+.bg-light {
+    background-color: rgb(255, 255, 255);
+    color: #666;
+}
+
+.form-group {
+    width: 100%;
+    margin: 10px 0px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: .9em;
+}
+
+input {
+    width: 85%;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    padding: 10px 0px;
+    outline: none;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Noto Sanst TC', sans-serif;
+    font-size: 1.1em;
+    color: #999;
+}
+
+input[type=password] {
+    font-family: 'Noto Sanst TC', sans-serif;
+    font-size: 1.1em;
+}
+
+input:hover {
+    border: 1px solid rgb(115, 215, 255);
+}
+
+input:focus {
+    border: 3px solid rgb(160, 230, 255);
+}
+
+.btn {
+    margin: 10px 0px;
+    width: 85%;
+    padding: 10px;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 5px; 
+    background-color: #999;
+    color: #FFF; 
+    transition: all .5s ease-in-out;  
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: rgb(75, 205, 255);
+}
+
+.btn-50 {
+    width: 45%;
+    margin: 10px 1px;
+}
+
+.link-card {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(75, 205, 255);    
+}
+
+.link-card:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(115, 215, 255);    
+}
+
+.field-message {
+    margin: 0 auto;
+    width: 85%;
+    border-radius: 5px;
+    font-size: .8em;
+    padding: 5px 0px;
+}
+
+.bg-success {
+    background-color: rgb(0, 255, 110);
+    color: #FFF;
+}
+
+.bg-danger {
+    background-color: rgb(255, 95, 95);
+    color: #FFF;
+}
+
+.bg-info {
+    background-color: rgb(65, 235, 255);
+    color: #FFF;
+}
+
+.icon {
+    height: 20px;
+}
+
+
+/* SPINNER */
+.sk-cube-grid {
+    width: 40px;
+    height: 40px;
+    margin: 25px auto;
+  }
+  
+  .sk-cube-grid .sk-cube {
+    width: 33%;
+    height: 33%;
+    background-color: rgb(75, 205, 255);;
+    float: left;
+    -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+            animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+  }
+  .sk-cube-grid .sk-cube1 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  .sk-cube-grid .sk-cube2 {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s; }
+  .sk-cube-grid .sk-cube3 {
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s; }
+  .sk-cube-grid .sk-cube4 {
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s; }
+  .sk-cube-grid .sk-cube5 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  .sk-cube-grid .sk-cube6 {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s; }
+  .sk-cube-grid .sk-cube7 {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s; }
+  .sk-cube-grid .sk-cube8 {
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s; }
+  .sk-cube-grid .sk-cube9 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  
+  @-webkit-keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+      -webkit-transform: scale3D(1, 1, 1);
+              transform: scale3D(1, 1, 1);
+    } 35% {
+      -webkit-transform: scale3D(0, 0, 1);
+              transform: scale3D(0, 0, 1); 
+    }
+  }
+  
+  @keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+      -webkit-transform: scale3D(1, 1, 1);
+              transform: scale3D(1, 1, 1);
+    } 35% {
+      -webkit-transform: scale3D(0, 0, 1);
+              transform: scale3D(0, 0, 1);
+    } 
+  }

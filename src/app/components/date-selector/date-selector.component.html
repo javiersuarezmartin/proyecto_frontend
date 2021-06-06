@@ -1,0 +1,22 @@
+
+<div class="message-date" (click)=closeMsgColor()>
+    <p [ngClass]="{'bg-success': msgColor.type, 'bg-danger': !msgColor.type }" *ngIf="msgColor.text !=''">{{ msgColor.text }}</p>  
+</div>
+
+<div class="date-selector-title">
+    <p>Por favor, selecciona una fecha para solicitar tu cita</p>
+</div>
+
+<div class="date-selector-body">
+    <div class="date-selector-item">
+        <app-calendar></app-calendar>
+    </div>
+    
+    <div class="date-selector-item" *ngIf="dateSelected">
+        <app-hour></app-hour>
+    </div>    
+</div>
+
+<div class="modal" *ngIf="showModal">
+    <app-modal-confirm></app-modal-confirm>
+</div>

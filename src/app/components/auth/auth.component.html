@@ -1,0 +1,53 @@
+<div class="container-auth">
+    <div class="card bg-light">
+        <div class="card-title">
+            <h2>{{ textoBoton }}</h2>
+        </div>
+        <div class="card-body">
+            <p class="field-message bg-danger" *ngIf="errorLogin !=''">{{ errorLogin }}</p>
+            <form [formGroup]="formData" (ngSubmit)="loginOrRegister()">
+                
+                <div class="form-group" *ngIf="showRegData">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" formControlName="name" placeholder="" required>
+                    <p class="field-message bg-danger" *ngIf="isEmptyField('name') && isTouchedField('name')">{{ validationErrors.name }}</p>             
+                </div> 
+    
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" formControlName="email" placeholder="" required (focus) = "resetErr()">
+                    <p class="field-message bg-danger" *ngIf="!isValidEmail() && isTouchedField('email')">{{ validationErrors.email }}</p>
+                </div>
+            
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" formControlName="password" placeholder="" required>
+                    <p class="field-message bg-danger" *ngIf="!isValidPassword() && isTouchedField('password')">{{ validationErrors.password }}</p>
+                </div>  
+    
+                <div class="form-group" *ngIf="showRegData">
+                    <label for="cpassword">Confirm Password</label>
+                    <input type="password" id="cpassword" name="cpassword" formControlName="passwordcheck" placeholder="" required (focus)="resetErr()">
+                    <p class="field-message bg-danger" *ngIf="isEmptyField('passwordcheck') && isTouchedField('passwordcheck')">{{ validationErrors.passwordcheck }}</p>  
+                    <p class="field-message bg-danger" *ngIf="errorPass !=''">{{ errorPass }}</p>                        
+                </div> 
+
+                <div class="form-group" *ngIf="showRegData">
+                    <label for="role">Selecciona esta casilla si deseas registrarte como Administrador</label>
+                    <input type="checkbox" id="role" name="role" value="1" formControlName="role">
+                </div> 
+    
+                <div class="form-group">
+                    <button class="btn">{{ textoBoton }}</button>
+                </div>
+    
+                <div class="form-group">
+                    <p *ngIf="!showRegData">¿Todavia no te has registrado? <a routerLink="/register" class="link-card">Registrar</a></p>
+                    <p *ngIf="showRegData">Ya estoy registrado <a routerLink="/login" class="link-card">Login</a></p>
+                </div>
+                
+            </form>        
+        </div>
+    </div>
+
+</div>

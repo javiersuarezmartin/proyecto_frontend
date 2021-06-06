@@ -1,0 +1,32 @@
+
+<div class="card-calendar bg-light">
+    <div class="card-body">
+        <div class="card-title">
+            <ul class="calendar-head">
+                <li>
+                    <button class="btn" (click)="backMonth()">
+                        <img class="icon-arrow" src="./assets/img/back.png" alt="back-month">
+                    </button>
+                </li>
+                <li>
+                    <h3 class="title-month">{{ nameCurrentMonth }} <br> {{ nameCurrentYear }}</h3>
+                </li>
+                <li>
+                    <button class="btn" (click)="nextMonth()">
+                        <img class="icon-arrow" src="./assets/img/next.png" alt="next-month">
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card-text">
+            <ol class="grid">
+                <li *ngFor="let day of weekDays" class="week_day">{{ day | slice:0:3 }}</li>
+
+                <li *ngFor="let day of monthSelect" (click)="getDay(day.day, day.month, day.year, day.disabled)" class="grid-item" [ngClass]="{'active': day.active == true, 'day': day.active == false, 'disabled': day.disabled == true }">
+                    {{ day.day }}
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+.list-dates {
+    margin: 10px auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+}
+
+.list-dates-item {
+    width: 95%;
+    background-color: #FFF;
+    border-radius: 5px;
+    margin: 5px 0px;
+    text-align: center;
+    box-shadow: 1px 1px 10px rgb(100, 130, 135);
+}
+
+.list-dates-item p {
+    margin: 10px 0px;
+    color: rgb(115, 215, 255);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.btn-date {
+    width: 90%;  
+    margin: 3px 0px;
+    padding: 5px 0px;
+    color: #FFF;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;  
+    font-weight: bold;  
+}
+
+.bg-blue {
+    background: rgb(115, 215, 255);
+}
+
+.bg-red {
+    background: red;
+}
+
+.list-dates-title {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.list-dates-title p {
+    color: #FFF;
+    font-weight: bold;
+}

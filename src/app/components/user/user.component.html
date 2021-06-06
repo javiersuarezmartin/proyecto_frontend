@@ -1,0 +1,14 @@
+<div class="list-dates-title">
+    <p>Tus próximas citas</p>
+</div>
+<div class="list-dates">
+    <div class="list-dates-item" *ngFor="let mydate of allDates">
+        <p>{{ mydate.date }}</p>
+        <p>{{ mydate.hour | slice:0:5 }}</p>
+        <button class="btn-date bg-blue" (click)="getDate(mydate)">Modificar</button>
+        <button class="btn-date bg-red" (click)="discardDate(mydate.id)">Anular</button>            
+    </div>
+</div>
+<app-date-selector></app-date-selector>
+
+

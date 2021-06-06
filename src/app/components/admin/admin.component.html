@@ -1,0 +1,112 @@
+<div class="container-admin">
+    <div class="card bg-light"> 
+        <p class="text-config">Establecer configuración</p>  
+        <p class="field-message" [ngClass]="{'bg-danger': !msgConfig.status, 'bg-success': msgConfig.status }" *ngIf="msgConfig.text">{{ msgConfig.text }}</p>    
+        <br>
+        <p class="field-message" [ngClass]="{'bg-danger': !msg_global.type, 'bg-success': msg_global.type }" *ngIf="msg_global.text !=''">{{ msg_global.text }}</p>    
+        
+        <ng-container *ngIf="msgConfigOk.interval">
+            <div class="grid-3">
+                <div class="config-item">
+                    <h3>Inicio</h3>
+                    <p>{{ msgConfigOk.hour_start | slice:0:5 }}</p>
+                </div>
+
+                <div class="config-item">
+                    <h3>Final</h3>
+                    <p>{{ msgConfigOk.hour_end | slice:0:5 }}</p>
+                </div>
+                    
+                <div class="config-item">
+                    <h3>Intervalo</h3>
+                    <p>{{ msgConfigOk.interval }} min</p>
+                </div>
+            </div>               
+        </ng-container>
+        
+        <div class="container-arrow" *ngIf="msgConfig.text && !msgConfig.status">
+            <div class="arrow">
+                V
+            </div>            
+        </div>
+
+        <button class="btn bg-blue" (click)="showConfigData()" *ngIf="!msgConfig.status">Configuración</button>        
+        <ng-container *ngIf="msgConfig.status">
+            
+            <button class="btn btn-50" (click)="showConfigData()">Cambiar</button>        
+        </ng-container>
+    </div>
+     
+    <div class="card bg-light" *ngIf="showConfig">
+      
+        <div class="card-body">
+            <form [formGroup]="formData" (ngSubmit)="saveConfig()">
+                
+                <div class="form-group">
+                    <label for="hour_start">Hora Inicio</label>
+                    <input type="time" id="hour_start" name="hour_start" formControlName="hour_start" placeholder="" (focus)="resetErr()" required>
+                    <p class="field-message bg-danger" *ngIf="isEmptyField('hour_start') && isTouchedField('hour_start')">{{ validationErrors.hour_start }}</p>             
+                </div>     
+        
+                <div class="form-group">
+                    <label for="hour_end">Hora Final</label>
+                    <input type="time" id="hour_end" name="hour_end" formControlName="hour_end" placeholder="" (focus)="resetErr()" required>
+                    <p class="field-message bg-danger" *ngIf="isEmptyField('hour_end') && isTouchedField('hour_end')">{{ validationErrors.hour_end }}</p>
+                </div> 
+            
+                <div class="form-group">
+                    <label for="interval">Intervalo (minutos)</label>
+                    <input type="number" min="1" max="999" id="interval" name="interval" formControlName="interval" placeholder="" (focus)="resetErr()" required>
+                    <p class="field-message bg-danger" *ngIf="(isEmptyField('interval') || !isValidInterval()) && isTouchedField('interval')">{{ validationErrors.interval }}</p>
+                </div>    
+
+                <div class="form-group">
+                    <button class="btn">Configurar</button>
+                </div>             
+                
+            </form>        
+        </div>
+    </div>
+    
+    <div class="dashboard-admin">
+        <app-calendar></app-calendar>
+
+        <div class="card bg-light" *ngIf="dateSelected">
+            <h3 class="list-admin-title">Citas</h3>
+            <p class="date-selected">{{ dateSelected }}</p>
+            <table class="list-admin-dates">
+                <tr>
+                    <th>
+                        HORA
+                    </th>
+                    <th>
+                        USUARIO
+                    </th>
+                </tr>   
+
+                <tr *ngFor="let dateItem of datesAllDay">
+                
+                    <td class="cell-hour">
+                        {{ dateItem.hour | slice:0:5 }}
+                    </td>
+                    <td class="cell-name">
+                        {{ dateItem.user_name }}
+                    </td>
+                </tr>
+            </table>
+            
+            <div class="sk-cube-grid" *ngIf="loading">
+                <div class="sk-cube sk-cube1"></div>
+                <div class="sk-cube sk-cube2"></div>
+                <div class="sk-cube sk-cube3"></div>
+                <div class="sk-cube sk-cube4"></div>
+                <div class="sk-cube sk-cube5"></div>
+                <div class="sk-cube sk-cube6"></div>
+                <div class="sk-cube sk-cube7"></div>
+                <div class="sk-cube sk-cube8"></div>
+                <div class="sk-cube sk-cube9"></div>
+            </div>
+        </div>
+    </div>
+    
+</div>

@@ -1,0 +1,18 @@
+.main-content {    
+    background-image: url('../../../assets/img/background.jpg');
+    background-size: cover;
+}
+
+.pt-50 {
+    padding-top: 50px;
+}
+
+.app-name {
+    margin-top: 10px;
+    color: rgb(115, 215, 255);
+    font-size: 1.5em;
+}
+
+.card-body p {
+    margin: 20px;
+}

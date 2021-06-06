@@ -1,0 +1,36 @@
+
+.message-date {
+    margin: 15px auto;
+    width: 80%;
+    height: 35px;   
+    text-align: center;
+}
+
+.message-date p {
+    padding: 5px 0px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.date-selector-body {
+    width: 100%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.date-selector-item {
+    width: 100%;
+}
+
+.date-selector-title {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.date-selector-title p {
+    color: #FFF;
+    font-weight: bold;
+}
+

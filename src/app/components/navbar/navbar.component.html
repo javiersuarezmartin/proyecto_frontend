@@ -1,0 +1,36 @@
+<div class="header">
+    <nav class="navbar">
+        <a routerLink="/"><img src="./assets/img/calendar.png" class="logo" alt="Logo"></a>
+
+        <ul class="nav-list" *ngIf="role == 1 && isLoggedIn">
+            <li class="nav-item-icon">
+                <a routerLink="admin" class="icon-link"><img src="./assets/img/config.png" alt="admin-config"></a>                    
+            </li>
+        </ul>      
+    
+        <ul class="nav-list">          
+
+            <ng-container *ngIf="!isLoggedIn">
+                <li class="nav-item">
+                    <a routerLink="login" routerLinkActive="active" class="nav-link">Login</a>
+                </li>
+    
+                <li class="nav-item">
+                    <a routerLink="register" routerLinkActive="active" class="nav-link">Registro</a>
+                </li>
+            </ng-container>
+           
+          
+            <ng-container *ngIf="isLoggedIn">
+                <li class="nav-item">
+                    <a routerLink="user" class="nav-link username">{{ this.username }}</a>                    
+                </li>           
+                           
+                <li class="nav-item">
+                    <a (click)="logout()" class="nav-link">Logout</a>
+                </li>
+            </ng-container>
+           
+        </ul>
+    </nav>
+</div>

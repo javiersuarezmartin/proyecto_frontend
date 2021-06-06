@@ -1,0 +1,25 @@
+<div class="modal-window">
+    <div class="card bg-light">
+        <div class="card-body">
+            <div class="card-title">                    
+                <h2 class="title-color">Cita</h2> 
+                <p>Por favor, confirma tu cita</p>                      
+            </div>
+
+            <div class="card-text">
+                <img class="icon" src="./assets/img/calendar-icon.png" alt="icon-calendar">               
+
+                <h3 class="text-blue small">{{ selectedWeekDay }}</h3>                   
+                <h3 class="title-color">{{ selectedDate }}</h3>
+                
+                <img class="icon" src="./assets/img/clock-icon.png" alt="icon-calendar">               
+
+                <h3 class="title-color">{{ selectedHour }}</h3>
+
+                <button class="btn btn-50" (click) = confirmCite()>SI</button>
+                <button class="btn btn-50" (click) = discardCite()>NO</button>
+
+            </div>
+        </div>
+    </div>        
+</div>

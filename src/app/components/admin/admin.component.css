@@ -1,0 +1,99 @@
+.container-admin {
+    margin-top: 50px;
+}
+
+.text-config {
+    margin:20px 0px ; 
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.config-item {
+    margin: 5px;
+    border: 1px solid rgb(75, 205, 255);
+    border-radius: 10px;
+}
+
+.config-item h3 {
+    margin: 5px 0px;
+    color: rgb(75, 205, 255);
+}
+
+.dashboard-admin {
+    width: 100%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.list-admin-title {
+    margin: 10px 0px;
+    color: rgb(75, 205, 255);
+    font-size: 1.5em;
+}
+
+.date-selected {
+    padding: 10px 0px;
+    background-color: rgb(75, 205, 255);
+    color: #FFF;
+    font-weight: bold;
+}
+
+.list-admin-dates {
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px;
+}
+
+.list-admin-dates tr {
+    padding: 5px 0px;
+}
+
+.list-admin-dates th,td {
+    padding: 5px 0px;
+    max-width: 100px;
+    overflow: hidden;
+}
+
+.cell-name {
+    padding-left: 20px;
+}
+
+.cell-hour {
+    background-color: rgb(75, 205, 255);
+    color: #FFF;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+/* FLECHA */
+
+.container-arrow {
+    width: 100%;
+    height: 50px;
+    margin: 10px auto;
+    position: relative;
+}
+
+.arrow {
+    margin-top: -25px;
+    animation: arrow 1s ease-in-out infinite;
+    font-weight: bold;
+    font-size:20px;
+    color:red;
+}
+
+@keyframes arrow {
+    0% {
+        transform: translate(0px, 25px);
+    }
+    50% {
+        transform: translate(0px, 30px);
+    }
+    100% {
+        transform: translate(0px, 25px);
+    }
+}

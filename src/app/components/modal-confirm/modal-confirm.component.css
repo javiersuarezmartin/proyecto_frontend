@@ -1,0 +1,19 @@
+.modal-window {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(139, 139, 139, .8); 
+    transition: all 1s;   
+}
+
+.modal-window .card {
+    margin-top: 75px;
+}
+
+.title-color {
+    color: rgb(75, 205, 255);
+    font-weight: bold;
+    margin: 10px 0px;
+}
